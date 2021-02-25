@@ -29,7 +29,7 @@ body {
     padding-bottom: 1rem;
     border-radius: 10px;
 
-    box-shadow: #070707 0px 4px 0px 0px;
+    box-shadow: #070707 0px 8px 0px 0px;
 }
 
 
@@ -80,10 +80,10 @@ body {
         width: 50px;
         height: 50px;
         background-color: $backgroundColor;
-        border-radius: 5px;
+        border-radius: 3px;
         padding: 1rem;
         margin: 1rem;
-        transition: all 250ms ease;
+        transition: all 150ms ease;
         box-shadow: rgb(224, 224, 224) 0px 2px 0px 0px;
         &:hover {
 

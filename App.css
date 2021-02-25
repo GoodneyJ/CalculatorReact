@@ -1,0 +1,317 @@
+/* VARIABLES */
+/* MIXINS */
+/* GENERAL */
+body {
+  background-color: #141414;
+  font-family: "Montserrat";
+  color: #e0e0e0;
+}
+
+.App {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #2a2a2a;
+  width: 500px;
+  margin: 2rem auto;
+  padding: 2rem 2rem;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  -webkit-box-shadow: #070707 0px 8px 0px 0px;
+          box-shadow: #070707 0px 8px 0px 0px;
+}
+
+/* OUTPUT COMPONENT */
+#output-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 75%;
+  height: 150px;
+  margin: 1rem auto;
+  margin-bottom: 0;
+  padding: 2rem;
+}
+
+#output-container #display {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  height: 125px;
+  width: 100%;
+  margin: 1rem auto;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: #141414;
+  border: 3px solid #1d1d1d;
+  border-radius: 2px;
+  overflow-x: hidden;
+}
+
+/* KEYPAD COMPONENT */
+#keypad-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 50%;
+  margin: 1rem auto;
+}
+
+#keypad-container #operator-btns-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#keypad-container #operator-btns-container .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#keypad-container .keypad-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  background-color: #141414;
+  border-radius: 3px;
+  padding: 1rem;
+  margin: 1rem;
+  -webkit-transition: all 150ms ease;
+  transition: all 150ms ease;
+  -webkit-box-shadow: #e0e0e0 0px 2px 0px 0px;
+          box-shadow: #e0e0e0 0px 2px 0px 0px;
+}
+
+#keypad-container .keypad-btn:hover {
+  -webkit-transform: translateY(3px);
+          transform: translateY(3px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+#keypad-container #utility-btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#keypad-container #utility-btns #equals {
+  width: 150px;
+}
+
+@media only screen and (max-width: 414px) {
+  .App {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: #2a2a2a;
+    width: 275px;
+    margin: 2rem auto;
+    padding: 2rem 2rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+    -webkit-box-shadow: #070707 0px 8px 0px 0px;
+            box-shadow: #070707 0px 8px 0px 0px;
+  }
+  /* OUTPUT COMPONENT */
+  #output-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 95%;
+    height: 100px;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: .5rem;
+  }
+  #output-container #display {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+    height: 125px;
+    width: 100%;
+    margin: 1rem auto;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #141414;
+    border: 3px solid #1d1d1d;
+    border-radius: 2px;
+    overflow-x: hidden;
+  }
+  #keypad-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    margin: 1rem auto;
+  }
+  #keypad-container #operator-btns-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #keypad-container #operator-btns-container .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  #keypad-container .keypad-btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 15px;
+    height: 15px;
+    background-color: #141414;
+    border-radius: 3px;
+    padding: 1rem;
+    margin: 1rem;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+    -webkit-box-shadow: #e0e0e0 0px 2px 0px 0px;
+            box-shadow: #e0e0e0 0px 2px 0px 0px;
+  }
+  #keypad-container .keypad-btn:hover {
+    -webkit-transform: translateY(3px);
+            transform: translateY(3px);
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    cursor: pointer;
+  }
+  #keypad-container #utility-btns {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #keypad-container #utility-btns #equals {
+    width: 150px;
+  }
+}
+/*# sourceMappingURL=App.css.map */

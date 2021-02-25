@@ -1,0 +1,194 @@
+/* VARIABLES */
+$backgroundColor: #141414;
+$grey: #1d1d1d;
+$lighterGrey: #2a2a2a;
+$textColor: #e0e0e0;
+$fontFamily: 'Montserrat';
+
+/* MIXINS */
+@mixin centerContent() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* GENERAL */
+body {
+    background-color: $backgroundColor;
+    font-family: $fontFamily;
+    color: $textColor;
+}
+
+.App {
+    @include centerContent();
+    flex-direction: column;
+    background-color: $lighterGrey;
+    width: 500px;
+    margin: 2rem auto;
+    padding: 2rem 2rem;
+    padding-bottom: 1rem;
+    border-radius: 10px;
+
+    box-shadow: #070707 0px 8px 0px 0px;
+}
+
+
+/* OUTPUT COMPONENT */
+#output-container {
+    @include centerContent();
+    width: 75%;
+    height: 150px;
+    margin: 1rem auto;
+    margin-bottom: 0;
+    padding: 2rem ;
+
+
+    #display {
+        @include centerContent();
+        align-items: center;
+        height: 125px;
+        width: 100%;
+        margin: 1rem auto;
+        font-size: 2rem;
+        font-weight: 600;
+        background-color: $backgroundColor;
+        border: 3px solid $grey;
+        border-radius: 2px;
+        overflow-x: hidden
+    }
+}
+
+/* KEYPAD COMPONENT */
+#keypad-container {
+    @include centerContent();
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    margin: 1rem auto;
+    
+    #operator-btns-container {
+        @include centerContent();
+        flex-direction: column;
+        .row {
+            display: flex;
+        }
+    }
+
+    .keypad-btn {
+        @include centerContent();
+        width: 50px;
+        height: 50px;
+        background-color: $backgroundColor;
+        border-radius: 3px;
+        padding: 1rem;
+        margin: 1rem;
+        transition: all 150ms ease;
+        box-shadow: rgb(224, 224, 224) 0px 2px 0px 0px;
+        &:hover {
+
+            transform: translateY(3px);
+            box-shadow: none;
+            cursor: pointer;
+        }
+    }
+
+    #utility-btns {
+        @include centerContent();
+        #equals {
+            width: 150px;
+        }
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .App {
+        @include centerContent();
+        flex-direction: column;
+        background-color: $lighterGrey;
+        width: 275px;
+        margin: 2rem auto;
+        padding: 2rem 2rem;
+        padding-bottom: 1rem;
+        border-radius: 10px;
+    
+        box-shadow: #070707 0px 8px 0px 0px;
+    }
+
+    /* OUTPUT COMPONENT */
+    #output-container {
+        @include centerContent();
+        flex-direction: column;
+        width: 95%;
+        height: 100px;
+        margin: 1rem auto;
+        margin-bottom: 0;
+        padding: .5rem;
+
+
+        #display {
+            @include centerContent();
+            align-items: center;
+            height: 125px;
+            width: 100%;
+            margin: 1rem auto;
+            font-size: 2rem;
+            font-weight: 600;
+            background-color: $backgroundColor;
+            border: 3px solid $grey;
+            border-radius: 2px;
+            overflow-x: hidden
+        }
+    }
+
+
+    #keypad-container {
+        @include centerContent();
+        align-items: center;
+        flex-direction: column;
+        font-size: 1.5rem;
+        font-weight: 600;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        width: 50%;
+        margin: 1rem auto;
+        
+        #operator-btns-container {
+            @include centerContent();
+            flex-direction: column;
+            .row {
+                display: flex;
+            }
+        }
+    
+        .keypad-btn {
+            @include centerContent();
+            width: 15px;
+            height: 15px;
+            background-color: $backgroundColor;
+            border-radius: 3px;
+            padding: 1rem;
+            margin: 1rem;
+            transition: all 150ms ease;
+            box-shadow: rgb(224, 224, 224) 0px 2px 0px 0px;
+            &:hover {
+    
+                transform: translateY(3px);
+                box-shadow: none;
+                cursor: pointer;
+            }
+        }
+    
+        #utility-btns {
+            @include centerContent();
+            #equals {
+                width: 150px;
+            }
+        }
+    }
+    
+
+}
